@@ -8,5 +8,10 @@ Created on Fri Mar 22 12:41:10 2019
 
 import pandas as pd # importando a biblioteca pandas
 
-base = pd.read_csv('credit_data.csv') #carregando o arquivo de dados na variavel 'base'
+base = pd.read_csv('credit_data.csv') # carregando o arquivo de dados na variavel 'base'
 base.describe() # fazendo a leitura dos dados do dataframe
+base.loc[ base['age'] < 0 ] # buscando os registros onde a idade for menor que zero
+# base.drop('age',1,inplace=True) #f orma para apagar a coluna selecionada inteira
+# base.drop(base[base.age < 0].index, inplace=True) # apaga apenas os registros errados
+base.mean() # obtendo a média dos valores na base de dados
+base['age'].mean() # obtendo a média das idades na base de dados
