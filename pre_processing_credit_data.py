@@ -15,3 +15,5 @@ base.loc[ base['age'] < 0 ] # buscando os registros onde a idade for menor que z
 # base.drop(base[base.age < 0].index, inplace=True) # apaga apenas os registros errados
 base.mean() # obtendo a média dos valores na base de dados
 base['age'].mean() # obtendo a média das idades na base de dados
+base['age'][base.age > 0].mean() # obtendo a média das idades que forem maior que zero na base de dados
+base.loc[base.age < 0, 'age'] = 40.92 # ajustando as idades com valores incorretos, setando o valor da média de idades
