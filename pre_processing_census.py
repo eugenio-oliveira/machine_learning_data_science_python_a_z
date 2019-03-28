@@ -6,3 +6,5 @@ Created on Tue Mar 26 13:10:40 2019
 @author: eugenio
 """
 
+import pandas as pd
+base = pd.read_csv('census.csv')
